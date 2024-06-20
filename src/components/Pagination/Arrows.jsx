@@ -14,7 +14,7 @@ export const ArrowLeft = ({ handlePageChange, page }) => (
       handlePageChange(page - 1)
     }}
     style={{
-      background: "url(/back.png) 0 0/100% 100% no-repeat",
+      background: "url(https://img.icons8.com/?size=100&id=40217&format=png&color=E4E5E3) 0 0/100% 100% no-repeat",
       opacity: page <= 1 ? "0.5" : "1",
       cursor: page <= 1 ? "default" : "pointer",
       ...styles
@@ -32,7 +32,7 @@ export const ArrowRigth = ({ handlePageChange, page, totalPages }) => (
       handlePageChange(page + 1)
     }}
     style={{
-      background: "url(/forward.png) 0 0/100% 100% no-repeat",
+      background: "url(https://img.icons8.com/?size=100&id=7849&format=png&color=E4E5E3) 0 0/100% 100% no-repeat",
       opacity: page >= totalPages ? "0.5" : "1",
       cursor: page >= totalPages ? "default" : "pointer",
       ...styles

@@ -29,9 +29,7 @@ export const SearchField = ({ onChange, value, onKeyDown }) => {
       <div 
         style={{
           position: "absolute",
-          backgroundImage: "url(/search-icon.png)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "",
+          background: "url(https://img.icons8.com/?size=100&id=7695&format=png&color=474B4F) 0 0/100% 100% no-repeat",
           width: "32px",
           height: "32px",
           top: "18%",

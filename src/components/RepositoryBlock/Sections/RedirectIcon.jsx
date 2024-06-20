@@ -8,7 +8,7 @@ export const RedirectIcon = ({ href }) => (
           width: "28px",
           height: "28px",
           borderRadius: "10px",
-          background: "url(/redirect-icon.png) 0 0/100% 100% no-repeat",
+          background: "url(https://img.icons8.com/?size=100&id=yBXF5cH3MJWw&format=png&color=E4E5E3) 0 0/100% 100% no-repeat",
           cursor: "pointer",
         }}
         className="highlight"

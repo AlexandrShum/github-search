@@ -77,7 +77,7 @@ export const PaginationBlock = ({ page, handlePageChange, totalPages }) => {
             handlePageChange(inputValue);
           }}
           style={{
-            background: `url(/pagination-arrow-right.png) 0 0/100% 100% no-repeat`,
+            background: `url(https://img.icons8.com/?size=100&id=37354&format=png&color=E4E5E3) 0 0/100% 100% no-repeat`,
             width: "1.5rem",
             height: "1.5rem",
             cursor: inputValue === null ? "default" : "pointer"
