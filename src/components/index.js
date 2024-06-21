@@ -1,7 +1,7 @@
-import { Search } from "./Search/Search";
-import { RepositoryInfo } from "./RepositoryBlock/RepositoryBlock";
-import { Container } from "./Container/Container";
-import { PaginationBlock } from "./Pagination/PaginationBlock";
+import {Search} from "./Search";
+import {RepositoryInfo} from "./RepositoryBlock";
+import {Container} from "./Container";
+import {PaginationBlock} from "./Pagination";
 
 export {
   Search,

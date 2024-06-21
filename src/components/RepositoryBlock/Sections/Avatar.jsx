@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-export const Avatar = ({ picture }) => (
+export const Avatar = ({picture}) => (
   <div
     style={{
       width: "60px",
@@ -11,3 +12,7 @@ export const Avatar = ({ picture }) => (
     }}
   />
 );
+
+Avatar.propTypes = {
+  picture: PropTypes.string.isRequired
+};

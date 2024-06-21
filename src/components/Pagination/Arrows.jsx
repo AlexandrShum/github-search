@@ -1,17 +1,18 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const styles = {
   width: "1.5rem",
   height: "1.5rem",
-}
+};
 
-export const ArrowLeft = ({ handlePageChange, page }) => (
+export const ArrowLeft = ({handlePageChange, page}) => (
   <div
     onClick={() => {
       if (page <= 1) {
         return null;
       } 
-      handlePageChange(page - 1)
+      handlePageChange(page - 1);
     }}
     style={{
       background: "url(https://img.icons8.com/?size=100&id=40217&format=png&color=E4E5E3) 0 0/100% 100% no-repeat",
@@ -23,13 +24,18 @@ export const ArrowLeft = ({ handlePageChange, page }) => (
   </div>
 );
 
-export const ArrowRigth = ({ handlePageChange, page, totalPages }) => (
+ArrowLeft.propTypes = {
+  handlePageChange: PropTypes.func.isRequired,
+  page: PropTypes.number.isRequired
+};
+
+export const ArrowRigth = ({handlePageChange, page, totalPages}) => (
   <div
     onClick={() => {
-      if ( page >= totalPages ) {
+      if (page >= totalPages) {
         return null;
       }
-      handlePageChange(page + 1)
+      handlePageChange(page + 1);
     }}
     style={{
       background: "url(https://img.icons8.com/?size=100&id=7849&format=png&color=E4E5E3) 0 0/100% 100% no-repeat",
@@ -39,3 +45,9 @@ export const ArrowRigth = ({ handlePageChange, page, totalPages }) => (
     }}>
   </div>
 );
+
+ArrowRigth.propTypes = {
+  handlePageChange: PropTypes.func.isRequired,
+  page: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired
+};

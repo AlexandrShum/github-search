@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-export const SearchButton = ({ onClick, disabled }) => {
-
+export const SearchButton = ({onClick, disabled}) => {
   return (
     <button
       onClick={onClick}
@@ -30,8 +30,13 @@ export const SearchButton = ({ onClick, disabled }) => {
             color: "#E4E5E3"
           }}
         >
-          { "Search" }
+          Search
         </div>
     </button>
   );
-}
+};
+
+SearchButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool
+};

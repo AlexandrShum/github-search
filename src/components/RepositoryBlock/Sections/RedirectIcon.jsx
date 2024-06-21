@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-export const RedirectIcon = ({ href }) => (
+export const RedirectIcon = ({href}) => (
   <div>
     <a href={href} target="_blank" rel="noopener noreferrer">
       <div
@@ -16,3 +17,7 @@ export const RedirectIcon = ({ href }) => (
     </a>
   </div>
 );
+
+RedirectIcon.propTypes = {
+  href: PropTypes.string
+};
