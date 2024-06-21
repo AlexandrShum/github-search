@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-export const Topics = ({ topic }) => (
+export const Topics = ({topic}) => (
   <div
     style={{
       margin: "4px",
@@ -9,6 +10,10 @@ export const Topics = ({ topic }) => (
       padding: "2px 8px"
     }}
   >
-    { `#${topic}` }
+    {`#${topic}`}
   </div>
 );
+
+Topics.propTypes = {
+  topic: PropTypes.string
+};

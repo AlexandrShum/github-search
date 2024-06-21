@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-export const SearchField = ({ onChange, value, onKeyDown }) => {
-
+export const SearchField = ({onChange, value, onKeyDown}) => {
   return (
     <div
       style={{
@@ -37,4 +37,10 @@ export const SearchField = ({ onChange, value, onKeyDown }) => {
         }}/>
     </div>
   );
-}
+};
+
+SearchField.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  onKeyDown: PropTypes.func.isRequired,
+};

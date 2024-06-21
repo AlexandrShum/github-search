@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { ArrowLeft, ArrowRigth } from "./Arrows";
+import React, {useState} from "react";
+import {ArrowLeft, ArrowRigth} from "./Arrows";
+import PropTypes from 'prop-types';
 
-export const PaginationBlock = ({ page, handlePageChange, totalPages }) => {
+export const PaginationBlock = ({page, handlePageChange, totalPages}) => {
   const [inputValue, setInputValue] = useState(null);
 
   const handleInputChange = (event) => {
@@ -41,18 +42,18 @@ export const PaginationBlock = ({ page, handlePageChange, totalPages }) => {
           margin: "0px 10px"
         }}
       >
-        <ArrowLeft handlePageChange={ handlePageChange } page={ page } />
-        <div style={{ fontSize: "24px", fontWeight: 500}}>
-          { page }
+        <ArrowLeft handlePageChange={handlePageChange} page={page} />
+        <div style={{fontSize: "24px", fontWeight: 500}}>
+          {page}
           {" / "}
           {totalPages}
         </div>
-        <ArrowRigth handlePageChange={ handlePageChange } page={ page } totalPages={ totalPages } />
+        <ArrowRigth handlePageChange={handlePageChange} page={page} totalPages={totalPages} />
       </div>
   
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end"}}>
-        <div style={{ fontSize: "24px", margin: "0px 8px" }}>
-          {"go to"}
+      <div style={{display: "flex", justifyContent: "space-between", alignItems: "end"}}>
+        <div style={{fontSize: "24px", margin: "0px 8px"}}>
+          go to
         </div>
         <input
           type="number"
@@ -85,4 +86,10 @@ export const PaginationBlock = ({ page, handlePageChange, totalPages }) => {
       </div>
     </div>
   );
-}
+};
+
+PaginationBlock.propTypes = {
+  page: PropTypes.number,
+  handlePageChange: PropTypes.func,
+  totalPages: PropTypes.number
+};
